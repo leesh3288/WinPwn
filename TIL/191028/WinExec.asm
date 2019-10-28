@@ -1,4 +1,6 @@
 ; https://idafchev.github.io/exploit/2017/09/26/writing_windows_shellcode.html
+; https://docs.microsoft.com/windows/win32/debug/pe-format
+
 format PE console
 use32
 entry start
@@ -65,7 +67,7 @@ _locate_function:  ; args 2: dll base, function name pointer
     add ecx, ebx          ; addr of PE Signature
     mov ecx, [ecx + 78h]  ; RVA of Export Table
     add ecx, ebx          ; addr of Export Table
-    mov edx, [ecx + 14h]  ; number of exported functions
+    mov edx, [ecx + 18h]  ; number of entries in name pointer table
     mov edi, [ecx + 20h]  ; RVA of Name Pointer Table
     add edi, ebx          ; addr of Name Pointer Table
     xor esi, esi          ; counter
