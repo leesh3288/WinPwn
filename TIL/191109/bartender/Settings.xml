@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MitigationPolicy>
+  <SystemConfig>
+    <SEHOP Enable="false" TelemetryOnly="false" />
+  </SystemConfig>
+  <AppConfig Executable="C:\Users\Public\bartender\bartender.exe">
+    <SEHOP Enable="false" TelemetryOnly="false" />
+  </AppConfig>
+</MitigationPolicy>
