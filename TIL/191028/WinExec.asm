@@ -6,10 +6,10 @@ use32
 entry start
 
 start:
-    push ebx
     push ebp
     mov ebp, esp
     sub esp, 4h
+    push ebx
     call _locate_kernel32
     mov [ebp - 04h], eax  ; kernel32 base
     push 00636578h
@@ -36,8 +36,8 @@ start:
     call eax
     add esp, 20h
     .end:
-        leave
         pop ebx
+        leave
         ret
 
 _locate_kernel32:  ; args 0
@@ -55,14 +55,14 @@ _locate_kernel32:  ; args 0
     ret
 
 _locate_function:  ; args 2: dll base, function name pointer
+    push ebp
+    mov ebp, esp
     push ebx
     push ecx
     push edx
     push edi
     push esi
-    push ebp
-    mov ebp, esp
-    mov ebx, [ebp + 1Ch]  ; dll base
+    mov ebx, [ebp + 08h]  ; dll base
     mov ecx, [ebx + 3Ch]  ; RVA of PE Signature
     add ecx, ebx          ; addr of PE Signature
     mov ecx, [ecx + 78h]  ; RVA of Export Table
@@ -77,7 +77,7 @@ _locate_function:  ; args 2: dll base, function name pointer
         jae .end
         push dword [edi + esi*4]
         add [esp], ebx
-        push dword [ebp + 20h]
+        push dword [ebp + 0ch]
         call _strcmp
         add esp, 8h
         test eax, eax
@@ -94,22 +94,22 @@ _locate_function:  ; args 2: dll base, function name pointer
         mov eax, [edi + esi*4]
         add eax, ebx
     .end:
-        leave
         pop esi
         pop edi
         pop edx
         pop ecx
         pop ebx
+        leave
         ret
 
 _strcmp:  ; args 2: s1, s2
+    push ebp
+    mov ebp, esp
     push ebx
     push edi
     push esi
-    push ebp
-    mov ebp, esp
-    mov edi, [ebp + 14h]
-    mov esi, [ebp + 18h]
+    mov edi, [ebp + 08h]
+    mov esi, [ebp + 0ch]
     .loop:
         mov al, [edi]
         mov bl, [esi]
@@ -123,8 +123,8 @@ _strcmp:  ; args 2: s1, s2
     .end:
         sub al, bl
         movsx eax, al
-        leave
         pop esi
         pop edi
         pop ebx
+        leave
         ret
