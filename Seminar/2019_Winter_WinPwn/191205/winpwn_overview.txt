@@ -1,0 +1,33 @@
+Introduction to Windows Exploitation
+
+When:
+2019 Winter Session, time & dates TBD
+
+Where:
+GoN 동방
+
+What (subject to change):
+1. Introduction to Windows environment
+    (1) General overview
+    (2) Calling conventions
+    (3) Some protection mechanisms (DEP, ASLR, ...)
+    (4) ...
+2. Windows shellcoding: x86, x86_64
+3. Stack buffer overflow & exploitation
+    (1) RET overwrite
+    (2) RET overwrite w/ GS cookie
+    (3) SEH overwrite w/o cookie
+    (4) SEH overwrite w/ cookie
+    (5) SEH overwriet w/ cookie + SEHOP
+    (6) CTF chals
+4. Introduction to Windows kernel environment (순한맛, 걱정 ㄴㄴ)
+5. Windows kernel exploit w/ CTF chals
+    (1) Privilege escalation shellcoding
+    (2) Function pointer overwrite
+    (3) Stack buffer overflow
+6. Windows Heap (할까말까 생각중)
+
+Prerequisite:
+1. Assembly coding (Given a C code, can you convert it into equivalent assembly code?)
+2. Familiarity with Linux userland exploitation techniques - Stack/Heap overflow, integer overflow, ROP (Can you solve GoN 2019 Fall Qual *babystack*?)
+3. Some programming experience (CS230 SP strongly recommended, CS330 OS recommended but not required)
