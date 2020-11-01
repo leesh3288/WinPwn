@@ -4,7 +4,7 @@ My study logs on Windows pwnables, plus some hopefully helpful resources.
 
 ## References
 
-These are the list of useful references I've checked out while studing Windows pwnable, dumped from my bookmarks. Note that some resources might be (heavily) outdated or partially mis-categorized.
+These are the list of useful references I've checked out while studying Windows pwnable, dumped from my bookmarks. Note that some resources might be (heavily) outdated or partially mis-categorized.
 
 ### Intro
 - [Intro to Windows Exploit Techniques for Linux PWNers](https://blog.pwnhub.cn/download/01/WinPWN.pdf)
