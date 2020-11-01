@@ -83,7 +83,14 @@ VULNERABILITIES IN CREATORS UPDATE [presentation](https://www.blackhat.com/docs/
 - CODEGATE 2020 CTF [winterpreter](https://github.com/leesh3288/CTF/tree/master/2020/CODEGATE_2020_Preliminary/winterpreter) & [winsanity](https://github.com/leesh3288/CTF/tree/master/2020/CODEGATE_2020_Finals/winsanity) 😉
 
 ### Tools
-TODO, will update after campus power outage is over :(
+- [appjaillauncher-rs](https://github.com/trailofbits/appjaillauncher-rs)
+- [Sysinternals Suite](https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite)
+- [WinDbg](https://docs.microsoft.com/ko-kr/windows-hardware/drivers/debugger/debugger-download-tools) / [x64dbg](https://x64dbg.com/)
+- [winchecksec](https://github.com/trailofbits/winchecksec) / [checksec.py](https://github.com/Wenzel/checksec.py)
+- [pdbex](https://github.com/wbenny/pdbex)
+- Python modules:
+  - pwintools ([original](https://github.com/masthoon/pwintools), [modified fork](https://github.com/leesh3288/pwintools))
+  - [pdbparse](https://github.com/moyix/pdbparse)
 
 ### (Automated) Deployment
 - [Running Windows Server 2k16 with Docker under Linux, KVM or Virtualbox](https://gist.github.com/mustafaakin/0cfbc1b4bb346a05a615)
