@@ -77,7 +77,7 @@ VULNERABILITIES IN CREATORS UPDATE [presentation](https://www.blackhat.com/docs/
 
 ### CTF Chals
 - [j00ru/ctf-tasks](https://github.com/j00ru/ctf-tasks)
-- [Awesome Windows CTF](https://zaratec.github.io/2019/09/19/awesome-windows-ctf/)
+- [Awesome Windows CTF](https://zaratec.io/awesome-windows-ctf/)
 - [WCTF 2019 LazyFragmentationHeap](https://github.com/scwuaptx/LazyFragmentationHeap)
 - [Hack.lu CTF 2020 LowFunHeap](https://ctftime.org/task/13503)
 - CODEGATE 2020 CTF [winterpreter](https://github.com/leesh3288/CTF/tree/master/2020/CODEGATE_2020_Preliminary/winterpreter) & [winsanity](https://github.com/leesh3288/CTF/tree/master/2020/CODEGATE_2020_Finals/winsanity) 😉
